@@ -1,0 +1,12 @@
+syntax="proto3";
+option java_package="stub";
+service Salutation{
+  rpc message(stream SalutRequest)returns(SalutResponse);
+
+}
+message SalutRequest{
+  string nom=1;
+}
+message SalutResponse{
+  string reponse=1;
+}

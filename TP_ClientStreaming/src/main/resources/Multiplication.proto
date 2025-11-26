@@ -1,0 +1,12 @@
+syntax="proto3";
+option java_package="proxy";
+service Multiplication{
+  rpc calcul(MultiRequest)returns (stream MultiResponse);
+}
+message MultiRequest{
+  int32 nombre=1;
+  int32 limite=2;
+}
+message MultiResponse{
+  string resultat=1;
+}
